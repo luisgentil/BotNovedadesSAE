@@ -1,2 +1,0 @@
-from replit
-falta .env
