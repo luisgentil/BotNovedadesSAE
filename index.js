@@ -16,7 +16,9 @@ console.log("App.js en marcha...");
 
 router.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/index.html'));
-
+  // establecemos un parámetro de control, que activa la comprobación del boja
+  console.log(req.query.q);
+if(req.query.q == 123) {
   ///////////////////////////////
   ///////////////////////////////
   setTimeout(() => {
@@ -55,8 +57,8 @@ router.get('/', function(req, res) {
       enviaMensaje.enviaMensaje(`Noticia en la web: \n "${actualizaNoticias[1][0]}"\n${actualizaNoticias[1][1]}`); // 
     }
   }, 30000);
-
-// El servidor espera a ser consultado para ejecutar las funciones. Mediante el servicio de cron-job.org se consulta una vez por hora.
+};
+// El servidor espera a ser consultado para ejecutar las funciones. Mediante el servicio de cron-job.org se consulta de vez en cuando
   ///////////////////////////////// 
 });
 app.use('/', router);
