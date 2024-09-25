@@ -37,7 +37,7 @@ if(req.query.q == 123) {
     if (actualiza[0] == 'hay una Novedad:') {
       enviaMensaje.enviaMensaje(`Nuevo en la web: \n "${actualiza[1][0]}"\n${actualiza[1][1]}`); // 
     }
-  }, 10000);
+  }, 15000);
 
    ///////////////////////////////// 
   setTimeout(() => {
@@ -45,7 +45,7 @@ if(req.query.q == 123) {
    // esta función consulta la 2º web, la de Noticias, y lo guarda la última novedad en el fichero novedades.json
     consultaWeb3.consultaWeb3(); 
     console.log("Web Noticias consultada.");
-  }, 20000);
+  }, 30000);
   
   ///////////////////////////////// 
   setTimeout(() => {
@@ -56,7 +56,7 @@ if(req.query.q == 123) {
     if (actualizaNoticias[0] == 'hay una Novedad:') {
       enviaMensaje.enviaMensaje(`Noticia en la web: \n "${actualizaNoticias[1][0]}"\n${actualizaNoticias[1][1]}`); // 
     }
-  }, 30000);
+  }, 45000);
 };
 // El servidor espera a ser consultado para ejecutar las funciones. Mediante el servicio de cron-job.org se consulta de vez en cuando
   ///////////////////////////////// 
