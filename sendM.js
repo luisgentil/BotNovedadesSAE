@@ -3,7 +3,6 @@
 function enviaMensaje(mensaje) {
   const { Telegraf } = require('telegraf');
   require('dotenv').config();
-
   const chatToken = process.env['BOT_TOKEN'];
   const chatId = process.env['CHATID'];
   const app = new Telegraf(chatToken); 
@@ -12,6 +11,6 @@ function enviaMensaje(mensaje) {
 
 }
 
-//enviaMensaje("Este texto debería ser distinto.");
+// enviaMensaje("Pruebas de cambio de servidor.");
 
 module.exports.enviaMensaje = enviaMensaje;

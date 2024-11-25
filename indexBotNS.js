@@ -5,6 +5,10 @@ const app = express();
 const router = express.Router();
 const path = require('path');
 
+/// test ///////////////////////////
+require('dotenv').config();
+const chatToken = process.env['BOT_TOKEN'];
+
 //////////////////////////////
 const consultaWeb = require('./consultaWeb.js');
 const consultaWeb3 = require('./consultaWeb3.js');
@@ -12,6 +16,7 @@ const enviaMensaje = require('./sendM.js');
 const comparaGuarda = require('./comparaGuarda.js');
 
 console.log("App.js en marcha...");
+console.log(chatToken);
 /////////////////////////////////
 
 router.get('/', function(req, res) {
@@ -69,8 +74,8 @@ router.get('/info', function(req, res) {
 });
 app.use('/info', router);
 
-let server = app.listen(3000, function() {
-  console.log('App server is running on port 3000');
+let server = app.listen(3003, function() {
+  console.log('App server is running on port 3003');
   console.log('to end press Ctrl + C');
 });
 
